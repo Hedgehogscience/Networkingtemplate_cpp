@@ -15,6 +15,11 @@ extern "C"
 {
     IServer *Createserver(const char *Hostname)
     {
+        /*
+            if(std::strstr(Hostname, "auth.domain.com"))
+                return new MyAuthserver();
+        */
+
         return nullptr;
     }
 }
