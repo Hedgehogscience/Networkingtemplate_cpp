@@ -5,6 +5,7 @@
 */
 
 #include "StdInclude.h"
+#include "Servers/Servers.h"
 
 // Clear the logfile on startup so we only save this session.
 namespace { struct Deletelog { Deletelog() { Clearlogfile(); } }; static Deletelog Deleted{}; }
@@ -12,7 +13,7 @@ namespace { struct Deletelog { Deletelog() { Clearlogfile(); } }; static Deletel
 // Network exports.
 extern "C"
 {
-    struct IServer *Createserver(const char *Hostname)
+    IServer *Createserver(const char *Hostname)
     {
         return nullptr;
     }
