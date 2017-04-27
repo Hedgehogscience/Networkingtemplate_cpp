@@ -159,6 +159,9 @@
     <ClCompile Include="Source\Utilities\Binary\Memprotect.cpp" />
     <ClCompile Include="Source\Utilities\Data\Bytebuffer.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Networkingtemplate_cpp.licenseheader" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

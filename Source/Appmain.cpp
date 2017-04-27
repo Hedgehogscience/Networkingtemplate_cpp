@@ -1,7 +1,7 @@
 /*
     Initial author: Convery
-    Started: 2017-03-27
-    License: MIT
+    Started: 2017-04-27
+    License: Apache 2.0
 */
 
 #include "StdInclude.h"
@@ -12,7 +12,10 @@ namespace { struct Deletelog { Deletelog() { Clearlogfile(); } }; static Deletel
 // Network exports.
 extern "C"
 {
-
+    struct IServer *Createserver(const char *Hostname)
+    {
+        return nullptr;
+    }
 }
 
 // Default entrypoint for windows.
