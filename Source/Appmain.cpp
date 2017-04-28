@@ -13,7 +13,7 @@ namespace { struct Deletelog { Deletelog() { Clearlogfile(); } }; static Deletel
 // Network exports.
 extern "C"
 {
-    IServer *Createserver(const char *Hostname)
+    EXPORT_ATTR IServer *Createserver(const char *Hostname)
     {
         /*
             if(std::strstr(Hostname, "auth.domain.com"))
