@@ -72,28 +72,28 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(ProjectDir)Bin\</OutDir>
     <IntDir>$(ProjectDir)Bin\</IntDir>
-    <TargetExt>.ayria$(PlatformArchitecture)</TargetExt>
+    <TargetExt>.Networkmodule</TargetExt>
     <UseMultiToolTask>true</UseMultiToolTask>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(ProjectDir)Bin\</OutDir>
     <IntDir>$(ProjectDir)Bin\</IntDir>
-    <TargetExt>.ayria$(PlatformArchitecture)</TargetExt>
+    <TargetExt>.Networkmodule</TargetExt>
     <UseMultiToolTask>true</UseMultiToolTask>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(ProjectDir)Bin\</OutDir>
     <IntDir>$(ProjectDir)Bin\</IntDir>
-    <TargetExt>.ayria$(PlatformArchitecture)</TargetExt>
+    <TargetExt>.Networkmodule</TargetExt>
     <UseMultiToolTask>true</UseMultiToolTask>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(ProjectDir)Bin\</OutDir>
     <IntDir>$(ProjectDir)Bin\</IntDir>
-    <TargetExt>.ayria$(PlatformArchitecture)</TargetExt>
+    <TargetExt>.Networkmodule</TargetExt>
     <UseMultiToolTask>true</UseMultiToolTask>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
