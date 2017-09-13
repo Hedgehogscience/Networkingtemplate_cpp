@@ -1,5 +1,5 @@
 /*
-    Initial author: Convery
+    Initial author: Convery (tcn@ayria.se)
     Started: 2017-9-13
     License: Apache 2.0
 */
