@@ -1,13 +1,11 @@
 /*
     Initial author: Convery
-    Started: 2017-03-28
-    License: MIT
+    Started: 2017-9-13
+    License: Apache 2.0
 */
 
 #pragma once
-#include <cstdint>
-#include <functional>
-#include <mutex>
+#include "../../Stdinclude.h"
 
 namespace Hooking
 {

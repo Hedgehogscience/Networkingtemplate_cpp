@@ -1,12 +1,10 @@
 /*
     Initial author: Convery
-    Started: 2017-03-28
-    License: MIT
+    Started: 2017-9-13
+    License: Apache 2.0
 */
 
-#include "../../StdInclude.h"
-#include "Memprotect.h"
-#include "Hooking.h"
+#include "../../Stdinclude.h"
 
 // Restore the memory where the hook was placed.
 bool Hooking::Stomphook::Removehook()
@@ -30,7 +28,8 @@ bool Hooking::Callhook::Removehook()
     return true;
 }
 
-#ifdef ENVIRONMENT64
+// Overwrite the games code with a redirection.
+#if defined (ENVIRONMENT64)
 bool Hooking::Stomphook::Installhook(void *Location, void *Target)
 {
     Savedlocation = Location;
@@ -69,7 +68,9 @@ bool Hooking::Callhook::Installhook(void *Location, void *Target)
 
     return true;
 }
+
 #else
+
 bool Hooking::Stomphook::Installhook(void *Location, void *Target)
 {
     Savedlocation = Location;
