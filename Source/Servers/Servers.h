@@ -12,3 +12,4 @@
 #include "Interfaces/IStreamserver.hpp"
 #include "Interfaces/IDatagramserver.hpp"
 #include "Interfaces/IHTTPServer.hpp"
+#include "Interfaces/ISSLServer.hpp"

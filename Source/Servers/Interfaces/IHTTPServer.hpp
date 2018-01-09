@@ -155,3 +155,6 @@ struct IHTTPserver : IStreamserver
     }
 };
 
+#if __has_include(<openssl\ssl.h>)
+
+#endif
