@@ -1,6 +1,6 @@
 /*
     Initial author: Convery (tcn@ayria.se)
-    Started: 0901-2018
+    Started: 09-01-2018
     License: MIT
     Notes:
         Provides implementations for the servertypes.
@@ -11,3 +11,4 @@
 #include "Interfaces/IServer.hpp"
 #include "Interfaces/IStreamserver.hpp"
 #include "Interfaces/IDatagramserver.hpp"
+#include "Interfaces/IHTTPServer.hpp"
