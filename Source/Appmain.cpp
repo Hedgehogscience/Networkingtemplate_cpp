@@ -1,45 +1,45 @@
 /*
     Initial author: Convery (tcn@ayria.se)
-    Started: 2017-9-13
+    Started: 08-01-2018
     License: MIT
+    Notes:
+        Provides the entrypoint for Windows and Nix.
 */
 
-#include "Stdinclude.h"
-#include "Servers/Servers.h"
+#include "Stdinclude.hpp"
 
-// Delete the last sessions log on startup for windows.
-#if defined (_WIN32)
-    namespace { struct Deletelog { Deletelog() { Clearlog(); } }; static Deletelog Deleted{}; }
-#endif
-
-// Network exports.
-extern "C"
+// Localnetworking callback for server lookups.
+extern "C" EXPORT_ATTR IServer *Createserver(const char *Hostname)
 {
-    EXPORT_ATTR IServer *Createserver(const char *Hostname)
-    {
-        /*
-            if(std::strstr(Hostname, "auth.domain.com"))
-                return new MyAuthserver();
-        */
+    /*
+        if(std::strstr(Hostname, "auth.domain.com"))
+            return new MyAuthserver();
+    */
 
-        return nullptr;
-    }
+    return nullptr;
 }
 
-// Default entrypoint for windows.
-#ifdef _WIN32
+#if defined _WIN32
 BOOLEAN WINAPI DllMain(HINSTANCE hDllHandle, DWORD nReason, LPVOID Reserved)
 {
     switch (nReason)
     {
         case DLL_PROCESS_ATTACH:
         {
-            // Rather not handle all thread updates.
+            // Opt-out of further thread notifications.
             DisableThreadLibraryCalls(hDllHandle);
-            break;
+
+            // Clear the previous sessions logfile.
+            Clearlog();
         }
     }
 
     return TRUE;
+}
+#else
+__attribute__((constructor)) void DllMain()
+{
+    // Clear the previous sessions logfile.
+    Clearlog();
 }
 #endif
