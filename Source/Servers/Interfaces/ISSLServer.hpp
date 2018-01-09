@@ -13,7 +13,7 @@
 #include <openssl\ssl.h>
 #include <openssl\err.h>
 
-struct ISSLserver : IStreamserver
+struct ISSLServer : IStreamserver
 {
     std::unordered_map<size_t, SSL_CTX *> Context;
     std::unordered_map<size_t, BIO *> Write_BIO;
