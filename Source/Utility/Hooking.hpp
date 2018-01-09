@@ -1,11 +1,14 @@
 /*
     Initial author: Convery (tcn@ayria.se)
-    Started: 2017-9-13
+    Started: 08-01-2018
     License: MIT
+    Notes:
+        A hook takes control over code-execution and can
+        redirect it to your function instead of the apps.
 */
 
 #pragma once
-#include "../../Stdinclude.h"
+#include "../Stdinclude.hpp"
 
 namespace Hooking
 {
