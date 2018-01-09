@@ -49,10 +49,15 @@ if (${CMAKE_CXX_COMPILER_ID} STREQUAL "GNU" OR ${CMAKE_CXX_COMPILER_ID} STREQUAL
     endif()
 endif()
 
+# Global library dependencies.
+find_package(openSSL)
+include_directories(${OPENSSL_INCLUDE_DIR})
+
 # Library dependencies for the platforms.
 if (${CMAKE_CXX_COMPILER_ID} STREQUAL "GNU" OR ${CMAKE_CXX_COMPILER_ID} STREQUAL "Clang")
-    target_link_libraries(Networkingtemplate dl pthread)
+    target_link_libraries(Networkingtemplate dl pthread ${OPENSSL_LIBRARY} ${OPENSSL_CRYPTO_LIBRARY})
 else()
+    target_link_libraries(Networkingtemplate ${OPENSSL_LIBRARY} ${OPENSSL_CRYPTO_LIBRARY})
 endif()
 
 # Use static VC runtimes when releasing on Windows.
