@@ -33,11 +33,11 @@ file(GLOB_RECURSE ASSEMBLY "Source/*.asm")
 if(${CMAKE_SIZEOF_VOID_P} EQUAL 4)
     add_library(Networkingtemplate SHARED ${SOURCES})
     set_target_properties(Networkingtemplate PROPERTIES PREFIX "")
-    set_target_properties(Networkingtemplate PROPERTIES SUFFIX ".ayria32")
+    set_target_properties(Networkingtemplate PROPERTIES SUFFIX ".LN32")
 else()
     add_library(Networkingtemplate SHARED ${SOURCES} ${ASSEMBLY})
     set_target_properties(Networkingtemplate PROPERTIES PREFIX "")
-    set_target_properties(Networkingtemplate PROPERTIES SUFFIX ".ayria64")
+    set_target_properties(Networkingtemplate PROPERTIES SUFFIX ".LN64")
 endif()
 
 # Differentiate between x64 and x86 builds.
