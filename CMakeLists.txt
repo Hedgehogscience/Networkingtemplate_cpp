@@ -57,7 +57,7 @@ include_directories(${OPENSSL_INCLUDE_DIR})
 if (${CMAKE_CXX_COMPILER_ID} STREQUAL "GNU" OR ${CMAKE_CXX_COMPILER_ID} STREQUAL "Clang")
     target_link_libraries(Networkingtemplate dl pthread ${OPENSSL_LIBRARIES})
 else()
-    target_link_libraries(Networkingtemplate ${OPENSSL_LIBRARIES})
+    target_link_libraries(Networkingtemplate ws2_32 ${OPENSSL_LIBRARIES})
 endif()
 
 # Use static VC runtimes when releasing on Windows.
